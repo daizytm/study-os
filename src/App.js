@@ -723,7 +723,7 @@ Return ONLY valid JSON (no markdown, no backticks):
 {"units":[{"name":"Unit name","topics":["Topic 1","Topic 2"]}]}
 Group topics into logical units. Create at least 2-3 units.`;
         const reply=await askGemini(prompt,fileData);
-        const clean=reply.replace(/\`\`\`json|\`\`\`/g,'').trim();
+        const clean=reply.replace(/```json|```/g,'').trim();
         setParsed(JSON.parse(clean));
         setPdfLoading(false);
       };
@@ -742,7 +742,7 @@ Return ONLY valid JSON (no markdown):
 {"units":[{"name":"Unit name","topics":["Topic 1","Topic 2"]}]}
 Create logical units with at least 2-3 topics each.`;
       const reply=await askGemini(prompt);
-      const clean=reply.replace(/\`\`\`json|\`\`\`/g,'').trim();
+      const clean=reply.replace(/```json|```/g,'').trim();
       setParsed(JSON.parse(clean));
     }catch{alert('Parsing failed. Check your text and try again.');}
     setParsing(false);
