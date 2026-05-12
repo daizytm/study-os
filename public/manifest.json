@@ -1,7 +1,7 @@
 {
   "short_name": "StudyOS",
   "name": "StudyOS — Smart Study Planner",
-  "description": "Your personal AI-powered study companion",
+  "description": "Your personal study companion",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,5 +13,6 @@
   "display": "standalone",
   "theme_color": "#4A47A3",
   "background_color": "#0E0D1A",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "id": "studyos"
 }
